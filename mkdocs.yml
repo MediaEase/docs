@@ -1,0 +1,128 @@
+site_name: MediaEase Project
+site_url: https://mediaease.github.io/
+site_description: Official documentation for the MediaEase Project
+site_author: tomcdj71
+
+repo_url: htttps://github.com/MediaEase/MediaEase
+repo_name: MediaEase/docs
+edit_uri: blob/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024 MediaEase
+nav:
+  - Home: index.md
+  - Code Of Conduct: resources/CODE_OF_CONDUCT.md
+  - Contributing: resources/CONTRIBUTING.md
+  - License: resources/LICENSE.md
+  - Security: resources/SECURITY.md
+  - HarmonyUI:
+    - Home: harmonyui/README.md
+    - Getting Started: harmonyui/GETTING_STARTED.md
+    - User Guide: harmonyui/USER_GUIDE.md
+    - Developer Guide: harmonyui/DEVELOPER_GUIDE.md
+  - Api Reference: api/index.html
+  - MediaEase:
+    - Home: mediaease/README.md
+    - Getting Started: mediaease/GETTING_STARTED.md
+    - Zen Scripts: 
+      - Home: indexes/scripts-index.md
+      - command Reference: 
+        - Home: indexes/command-index.md
+        - api: scripts/command/api/README.md
+        - set: scripts/command/set/README.md
+        - software:  scripts/command/software/
+        - support: scripts/command/support/README.md
+        - user: scripts/command/user/
+    - Softwares: 
+      - Home: scripts/software/README.md
+      - Official: scripts/software/official.md
+      - Community: scripts/software/community.md
+    - User Guide: mediaease/USER_GUIDE.md
+    - Developer Guide: mediaease/DEVELOPER_GUIDE.md
+
+theme: 
+  name: material
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/mediaease.png
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.inlinehilite

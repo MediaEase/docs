@@ -1,0 +1,22 @@
+type: object
+properties:
+  total:
+    type: number
+    format: float
+    description: Total amount of RAM available, in MB.
+  used:
+    type: number
+    format: float
+    description: Amount of RAM used, in MB.
+  free:
+    type: number
+    format: float
+    description: Amount of free RAM, in MB.
+  available:
+    type: number
+    format: float
+    description: Amount of RAM available for use, in MB.
+  percentage:
+    type: number
+    format: float
+    description: Percentage of RAM currently used.

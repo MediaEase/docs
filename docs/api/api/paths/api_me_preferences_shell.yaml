@@ -1,0 +1,27 @@
+patch:
+  tags:
+    - Profile
+  summary: Update user shell
+  operationId: updateShell
+  requestBody:
+    content:
+      application/hal+json:
+        schema:
+          $ref: ../components/schemas/Shell.yaml
+  responses:
+    '200':
+      description: User shell updated
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/Shell.yaml
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '422':
+      $ref: ../components/responses/422.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

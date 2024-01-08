@@ -1,0 +1,41 @@
+name: Generate Docs
+
+on:
+  repository_dispatch:
+    types: [harmonyui-docs, scripts-docs, mediaease-docs]
+
+jobs:
+  generate_docs:
+    name: Generate Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Python Dependencies
+        if: ${{ github.event.client_payload.event_type == 'harmonyui-docs' }}
+        run: pip install pyyaml
+
+      - name: Clone and Process Repository
+        run: |
+          git clone --depth 1 -b main https://github.com/MediaEase/${{ github.event.client_payload.repo }}.git
+          cd ${{ github.event.client_payload.repo }}
+          git checkout main
+          cp ../.github/scripts/* .github/scripts/
+          chmod +x .github/scripts/update-docs.sh
+          .github/scripts/update-docs.sh ${{ github.event.client_payload.repo }}
+
+      - name: Lint and Split OpenAPI Specs with Redocly
+        if: ${{ github.event.client_payload.repo == 'HarmonyUI' }}
+        uses: seeebiii/redoc-cli-github-action@v10
+        with:
+          args: |
+            lint ./openapi-redoc.yaml
+            split ./openapi-redoc.yaml --outDir docs/api/openapi
+            bundle ./openapi-redoc.yaml --output docs/redocly/dist.json
+            echo "OpenAPI specs linted, split, and bundled"

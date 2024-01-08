@@ -1,0 +1,89 @@
+get:
+  tags:
+    - Users
+  summary: Get user details
+  operationId: getUser
+  parameters:
+    - name: id
+      in: path
+      description: User Identifier
+      schema:
+        type: integer
+      required: true
+  responses:
+    '200':
+      description: Returns user details
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '404':
+      $ref: ../components/responses/404.yaml
+    '500':
+      $ref: ../components/responses/500.yaml
+put:
+  tags:
+    - Users
+  summary: Update user
+  operationId: updateCustomer
+  parameters:
+    - name: id
+      in: path
+      description: User Identifier
+      schema:
+        type: integer
+      required: true
+  requestBody:
+    content:
+      application/hal+json:
+        schema:
+          properties:
+            email:
+              type: string
+          type: object
+  responses:
+    '200':
+      description: User updated
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '404':
+      $ref: ../components/responses/404.yaml
+    '422':
+      $ref: ../components/responses/422.yaml
+    '500':
+      $ref: ../components/responses/500.yaml
+delete:
+  tags:
+    - Users
+  summary: Delete user
+  operationId: deleteCustomer
+  parameters:
+    - name: id
+      in: path
+      description: User Identifier
+      schema:
+        type: integer
+      required: true
+  responses:
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '404':
+      $ref: ../components/responses/404.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

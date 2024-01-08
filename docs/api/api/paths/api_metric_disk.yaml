@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Metrics
+  summary: Get disk metrics
+  operationId: getDiskUsage
+  responses:
+    '200':
+      description: Returns disk metrics
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/Disk.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

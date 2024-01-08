@@ -1,0 +1,23 @@
+post:
+  tags:
+    - Profile
+  summary: Add service
+  operationId: addService
+  requestBody:
+    content:
+      application/hal+json:
+        schema:
+          $ref: ../components/schemas/Service.yaml
+  responses:
+    '201':
+      description: Service added
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/Service.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '422':
+      $ref: ../components/responses/422.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

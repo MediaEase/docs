@@ -1,0 +1,27 @@
+type: object
+properties:
+  name:
+    type: string
+  altname:
+    type: string
+  logo:
+    type: string
+  type:
+    type: string
+    enum:
+      - remote
+      - media
+      - automation
+      - download
+  groups:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+  store:
+    type: object
+    properties:
+      id:
+        type: integer

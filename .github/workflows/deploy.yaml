@@ -1,0 +1,77 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  id-token: write
+  pages: write
+
+env:
+  PYTHON_VERSION: 3.x
+
+jobs:
+  documentation:
+    name: Build documentation
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Set up build cache
+        uses: actions/cache/restore@v3
+        with:
+          key: mkdocs-material-${{ hashfiles('.cache/**') }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      - name: Install dependencies
+        run: sudo apt-get install pngquant
+
+      - name: Install Python dependencies
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-material[recommended,git,imaging]
+
+      - name: Build documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.MEDIAEASE_ACCESS_TOKEN }}
+        run: |
+          mkdocs build --clean
+          mkdocs --version
+
+      - name: Adjust permissions
+        run: |
+          chmod -c -R +rX site/ | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+          venv/bin/pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-material[recommended,git,imaging]
+          mkdocs gh-deploy --force
+
+      - name: Save build cache
+        uses: actions/cache/save@v3
+        with:
+          key: mkdocs-material-${{ hashfiles('.cache/**') }}
+          path: .cache
+

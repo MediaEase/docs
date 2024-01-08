@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: HarmonyUI V1 API
+  description: >-
+    Use these APIs to interact with the  HarmonyUI backend. You can find out
+    more about the HarmonyUI project at htttps://github.com/MediaEase/HarmonyUI
+  termsOfService: https:///github.com/MediaEase/HarmonyUI/tos
+  contact:
+    name: MediaEase
+    url: htttps://github.com/MediaEase/MediaEase
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  version: current
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+security:
+  - Bearer: []
+  - apiKey: []
+tags:
+  - name: Apps
+    description: Apps related endpoints
+  - name: Authentication
+    description: Authentication related endpoints
+  - name: Metrics
+    description: Metrics related endpoints
+  - name: Profile
+    description: Profile related endpoints
+  - name: Store
+    description: Store related endpoints
+  - name: Users
+    description: Users related endpoints
+paths:
+  /api/apps:
+    $ref: paths/api_apps.yaml
+  /api/apps/{id}:
+    $ref: paths/api_apps_{id}.yaml
+  /api/login_check:
+    $ref: paths/api_login_check.yaml
+  /api/users/{id}:
+    $ref: paths/api_users_{id}.yaml
+  /api/metric/cpu:
+    $ref: paths/api_metric_cpu.yaml
+  /api/metric/disk:
+    $ref: paths/api_metric_disk.yaml
+  /api/metric/mem:
+    $ref: paths/api_metric_mem.yaml
+  /api/metric/net:
+    $ref: paths/api_metric_net.yaml
+  /api/me/preferences:
+    $ref: paths/api_me_preferences.yaml
+  /api/me/preferences/pin:
+    $ref: paths/api_me_preferences_pin.yaml
+  /api/me/preferences/theme:
+    $ref: paths/api_me_preferences_theme.yaml
+  /api/me/preferences/lang:
+    $ref: paths/api_me_preferences_lang.yaml
+  /api/me/preferences/shell:
+    $ref: paths/api_me_preferences_shell.yaml
+  /api/me/preferences/display:
+    $ref: paths/api_me_preferences_display.yaml
+  /api/me/preferences/widgets:
+    $ref: paths/api_me_preferences_widgets.yaml
+  /api/me/my_apps:
+    $ref: paths/api_me_my_apps.yaml
+  /api/me/services:
+    $ref: paths/api_me_services.yaml
+  /api/me/services/{id}:
+    $ref: paths/api_me_services_{id}.yaml
+  /api/me/services/status:
+    $ref: paths/api_me_services_status.yaml
+  /api/store:
+    $ref: paths/api_store.yaml
+components:
+  securitySchemes:
+    Bearer:
+      type: http
+      scheme: bearer
+    apiKey:
+      type: apiKey
+      description: 'Value: {apiKey}'
+      in: header
+      name: X-API-KEY

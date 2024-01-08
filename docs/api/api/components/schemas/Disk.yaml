@@ -1,0 +1,10 @@
+type: object
+properties:
+  total:
+    type: number
+  used:
+    type: number
+  free:
+    type: number
+  percentage:
+    type: number
