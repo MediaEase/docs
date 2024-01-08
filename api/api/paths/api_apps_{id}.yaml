@@ -1,0 +1,83 @@
+get:
+  tags:
+    - Apps
+  summary: Get app details
+  operationId: getApp
+  parameters:
+    - name: id
+      in: path
+      description: App Identifier
+      schema:
+        type: integer
+      required: true
+  responses:
+    '200':
+      description: Returns app details
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/App.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '404':
+      $ref: ../components/responses/404.yaml
+    '500':
+      $ref: ../components/responses/500.yaml
+put:
+  tags:
+    - Apps
+  summary: Update app
+  operationId: updateApp
+  parameters:
+    - name: id
+      in: path
+      description: App Identifier
+      schema:
+        type: integer
+      required: true
+  requestBody:
+    content:
+      application/hal+json:
+        schema:
+          $ref: ../components/schemas/App.yaml
+  responses:
+    '200':
+      description: App updated
+      content:
+        application/hal+json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '404':
+      $ref: ../components/responses/404.yaml
+    '422':
+      $ref: ../components/responses/422.yaml
+    '500':
+      $ref: ../components/responses/500.yaml
+delete:
+  tags:
+    - Apps
+  summary: Delete app
+  operationId: deleteApp
+  parameters:
+    - name: id
+      in: path
+      description: App Identifier
+      schema:
+        type: integer
+      required: true
+  responses:
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '404':
+      $ref: ../components/responses/404.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

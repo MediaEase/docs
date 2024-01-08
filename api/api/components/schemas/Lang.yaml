@@ -1,0 +1,4 @@
+type: object
+properties:
+  language:
+    type: string

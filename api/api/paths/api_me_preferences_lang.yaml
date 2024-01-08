@@ -1,0 +1,27 @@
+patch:
+  tags:
+    - Profile
+  summary: Update user language
+  operationId: updateLanguage
+  requestBody:
+    content:
+      application/hal+json:
+        schema:
+          $ref: ../components/schemas/Lang.yaml
+  responses:
+    '200':
+      description: User language updated
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/Lang.yaml
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '422':
+      $ref: ../components/responses/422.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

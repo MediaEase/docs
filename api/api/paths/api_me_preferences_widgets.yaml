@@ -1,0 +1,27 @@
+patch:
+  tags:
+    - Profile
+  summary: Update user widgets
+  operationId: updateWidgets
+  requestBody:
+    content:
+      application/hal+json:
+        schema:
+          $ref: ../components/schemas/Widget.yaml
+  responses:
+    '200':
+      description: User widgets updated
+      content:
+        application/hal+json:
+          schema:
+            $ref: ../components/schemas/Widget.yaml
+    '204':
+      $ref: ../components/responses/204.yaml
+    '401':
+      $ref: ../components/responses/401.yaml
+    '403':
+      $ref: ../components/responses/403.yaml
+    '422':
+      $ref: ../components/responses/422.yaml
+    '500':
+      $ref: ../components/responses/500.yaml

@@ -1,0 +1,45 @@
+type: object
+properties:
+  id:
+    type: integer
+  username:
+    type: string
+  roles:
+    type: array
+    items:
+      type: string
+  mounts:
+    type: array
+    items:
+      type: object
+      properties:
+        path:
+          type: string
+        rclone:
+          type: boolean
+  email:
+    type: string
+  isVerified:
+    type: boolean
+  preference:
+    type: object
+    properties:
+      pinnedApps:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+      display:
+        type: string
+      shell:
+        type: string
+      selectedWidgets:
+        type: array
+        items:
+          type: string
+      theme:
+        type: string
+  apiKey:
+    type: string
