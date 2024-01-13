@@ -1,4 +1,0 @@
-type: object
-properties:
-  pin:
-    type: string

@@ -1,6 +1,0 @@
-type: object
-properties:
-  widgets:
-    type: array
-    items:
-      type: string
