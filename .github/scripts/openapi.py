@@ -2,10 +2,10 @@ import os
 import yaml
 
 # Path to the nelmio_api_doc.yaml file
-nelmio = '../../config/packages/nelmio_api_doc.yaml'
+nelmio = 'MediaEase/frontend/config/packages/nelmio_api_doc.yaml'
 
 # Path to the new file
-destination_path = '../../../openapi-redoc.yaml'
+destination_path = './openapi-redoc.yaml'
 
 # Load the nelmio_api_doc.yaml file
 try:

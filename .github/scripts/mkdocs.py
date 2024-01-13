@@ -38,6 +38,6 @@ def convert_all_readme_files_in_repo(start_directory):
                 print(result)
 
 # Starting directory - adjust as needed
-start_directory = '../../'
+start_directory = './docs/'
 
 convert_all_readme_files_in_repo(start_directory)

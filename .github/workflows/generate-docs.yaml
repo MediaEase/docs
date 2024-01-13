@@ -2,15 +2,19 @@ name: Generate Docs
 
 on:
   repository_dispatch:
-    types: [harmonyui-docs, scripts-docs, mediaease-docs]
+    types: [mediaease-release]
 
 jobs:
   generate_docs:
     name: Generate Docs
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with: 
+          fetch-depth: 0  
 
       - name: Setup Python Environment
         uses: actions/setup-python@v2
@@ -18,17 +22,16 @@ jobs:
           python-version: '3.x'
 
       - name: Install Python Dependencies
-        if: ${{ github.event.client_payload.event_type == 'harmonyui-docs' }}
         run: pip install pyyaml
 
+      - name: Clone MediaEase
+        run: |
+          git clone --depth 1 -b main https://github.com/MediaEase/MediaEase.git MediaEase
+          
       - name: Clone and Process Repository
         run: |
-          git clone --depth 1 -b main https://github.com/MediaEase/${{ github.event.client_payload.repo }}.git
-          cd ${{ github.event.client_payload.repo }}
-          git checkout main
-          cp ../.github/scripts/* .github/scripts/
           chmod +x .github/scripts/update-docs.sh
-          .github/scripts/update-docs.sh ${{ github.event.client_payload.repo }}
+          .github/scripts/update-docs.sh
 
       - name: Lint and Split OpenAPI Specs with Redocly
         if: ${{ github.event.client_payload.repo == 'HarmonyUI' }}
@@ -39,3 +42,25 @@ jobs:
             split ./openapi-redoc.yaml --outDir docs/api/openapi
             bundle ./openapi-redoc.yaml --output docs/redocly/dist.json
             echo "OpenAPI specs linted, split, and bundled"
+            rm -f ./openapi-redoc.yaml
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'tomcdj71'
+          git config --global user.email 'actions@github.com'
+
+      - name: Commit and Push Changes
+        run: |
+          rm -rf MediaEase
+          git add .
+          git commit -m "docs: update to MediaEase ${{ github.event.client_payload.mediaease_version }}"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.MEDIAEASE_ACCESS_TOKEN }}
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.MEDIAEASE_ACCESS_TOKEN }}
+          repository: MediaEase/docs
+          event-type: documentation_generated
