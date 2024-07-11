@@ -7,9 +7,9 @@ rm -rf docs/{api,harmonyui,mediaease,scripts}
 mkdir -p docs/{api,harmonyui,mediaease,scripts}
 cp -r MediaEase/docs/* docs/mediaease
 cp -r MediaEase/README.md docs/mediaease
-cp -r MediaEase/frontend/docs/* docs/harmonyui
-cp -r MediaEase/frontend/README.md docs/harmonyui
-cp -r MediaEase/scripts/docs* docs/scripts
-cp -r MediaEase/scripts/README.md docs/scripts
+cp -r MediaEase/harmonyui/docs/* docs/harmonyui
+cp -r MediaEase/harmonyui/README.md docs/harmonyui
+cp -r MediaEase/zen/docs* docs/scripts
+cp -r MediaEase/zen/README.md docs/scripts
 python .github/scripts/openapi.py
 python .github/scripts/mkdocs.py

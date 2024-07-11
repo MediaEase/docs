@@ -2,7 +2,7 @@ import os
 import yaml
 
 # Path to the nelmio_api_doc.yaml file
-nelmio = 'MediaEase/frontend/config/packages/nelmio_api_doc.yaml'
+nelmio = 'MediaEase/harmonyui/config/packages/nelmio_api_doc.yaml'
 
 # Path to the new file
 destination_path = './openapi-redoc.yaml'
