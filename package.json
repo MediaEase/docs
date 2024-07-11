@@ -4,7 +4,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.5.1",
         "@primer/octicons": "^19.8.0",
-        "@redocly/cli": "1.6.0",
+        "@redocly/cli": "1.14.0",
         "material-design-color": "^2.3.2",
         "material-shadows": "^3.0.1"
     },
