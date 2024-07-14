@@ -36,22 +36,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mediaease.github.io/mediaease/CODE_OF_CONDUCT/</loc>
+         <loc>https://mediaease.github.io/mediaease/docs/CODE_OF_CONDUCT/</loc>
          <lastmod>2024-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mediaease.github.io/mediaease/CONTRIBUTING/</loc>
+         <loc>https://mediaease.github.io/mediaease/docs/CONTRIBUTING/</loc>
          <lastmod>2024-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mediaease.github.io/mediaease/CONTRIBUTORS/</loc>
+         <loc>https://mediaease.github.io/mediaease/docs/CONTRIBUTORS/</loc>
          <lastmod>2024-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mediaease.github.io/mediaease/SECURITY/</loc>
+         <loc>https://mediaease.github.io/mediaease/docs/SECURITY/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mediaease.github.io/mediaease/docs/setup/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mediaease.github.io/mediaease/docs/GETTING_STARTED/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mediaease.github.io/mediaease/docs/GETTING_STARTED/additional-options/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mediaease.github.io/mediaease/docs/GETTING_STARTED/full-example/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mediaease.github.io/mediaease/docs/GETTING_STARTED/installation/</loc>
+         <lastmod>2024-07-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mediaease.github.io/mediaease/docs/GETTING_STARTED/raid-setup/</loc>
          <lastmod>2024-07-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
