@@ -1179,12 +1179,14 @@
 ./setup.sh -u $username -p $password -e $email --bypass-prompt
 ```
 </code></pre></div>
-<blockquote>
-<p>[!WARNING]
-If <code>--bypass-prompt</code> is set without <code>-vs</code> or <code>--vault-salt</code> flags, a default salt password will be used. Save it securely as you will see it only once. </p>
-<p>[!TIP]
-The vault salt is used internally for storing some information more securely. You should not need to use it directly unless you know what you are doing.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If <code>--bypass-prompt</code> is set without <code>-vs</code> or <code>--vault-salt</code> flags, a default salt password will be used. Save it securely as you will see it only once. </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The vault salt is used internally for storing some information more securely. You should not need to use it directly unless you know what you are doing.</p>
+</div>
 <h2 id="using-a-virtual-machine">Using a Virtual Machine?<a class="headerlink" href="#using-a-virtual-machine" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>Add the `-vm` or `--virtual-machine` flag:
 
@@ -1207,10 +1209,10 @@ domain=&quot;mediaease.io&quot;
 ./setup.sh -u $username -p $password -e $email -d $domain
 ```
 </code></pre></div>
-<blockquote>
-<p>[!TIP]
-Setting a domain during installation can help in configuring SSL and other domain-specific settings automatically.</p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Setting a domain during installation can help in configuring SSL and other domain-specific settings automatically.</p>
+</div>
 <h2 id="set-up-a-raid-array">Set Up a RAID Array<a class="headerlink" href="#set-up-a-raid-array" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>Add the `--raid` flag with a comma-separated list. Example configurations:
 
@@ -1228,14 +1230,18 @@ raid=&quot;10,btrfs,/mnt,md15&quot;
 ./setup.sh -u $username -p $password -e $email --raid $raid
 ```
 </code></pre></div>
-<blockquote>
-<p>[!IMPORTANT]
-Possible RAID levels are 0, 5, 6, 10, depending on the number of available disks. </p>
-<p>[!IMPORTANT]
-Possible filesystem types are ext4, btrfs, xfs. </p>
-<p>[!TIP]
-Arguments are not positional, so raid /opt/,0,md69,ext4 can also work!</p>
-</blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Possible RAID levels are 0, 5, 6, 10, depending on the number of available disks. </p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Possible filesystem types are ext4, btrfs, xfs. </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Arguments are not positional, so raid /opt/,0,md69,ext4 can also work!</p>
+</div>
 <h2 id="choose-a-different-language">Choose a Different Language<a class="headerlink" href="#choose-a-different-language" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>This will change the server language as well as translating CLI (Zen)/GUI (HarmonyUI) into the selected language. Add the `-lang` flag. Supported languages: `en` (default) and `fr`.
 
@@ -1244,10 +1250,10 @@ lang=&quot;en&quot;
 ./setup.sh -u $username -p $password -e $email --lang $lang
 ```
 </code></pre></div>
-<blockquote>
-<p>[!TIP]
-Changing the language can be particularly useful for non-English speaking users to have a more intuitive interface.</p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Changing the language can be particularly useful for non-English speaking users to have a more intuitive interface.</p>
+</div>
 <h2 id="change-default-sshftp-ports">Change Default SSH/FTP Ports<a class="headerlink" href="#change-default-sshftp-ports" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>By default, MediaEase will set up port 4747 for SSH/SFTP and port 5757 for FTP. You can change the ports with the `-ports` flag and a comma-separated list.
 

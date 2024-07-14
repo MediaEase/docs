@@ -1336,10 +1336,10 @@ For a better read, and additional informations, you can check the [documentation
 <ul>
 <li><strong>Operating System</strong>: Fresh Debian 12 (Bookworm) server. More distributions support will come later.</li>
 </ul>
-<blockquote>
-<p>[!WARNING]
-If you want to set up a RAID array during the installation (yes, MediaEase can do it for you!), you may refer to the <a href="https://mediaease.github.io/docs/mediaease/GETTING_STARTED">Set Up a RAID Array</a>.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you want to set up a RAID array during the installation (yes, MediaEase can do it for you!), you may refer to the <a href="https://mediaease.github.io/docs/mediaease/GETTING_STARTED">Set Up a RAID Array</a>.</p>
+</div>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -1359,21 +1359,18 @@ If you want to set up a RAID array during the installation (yes, MediaEase can d
     <code>curl -sSL https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh -o setup.sh &amp;&amp; chmod +x setup.sh</code></p>
 </li>
 <li>
-<p><strong>Customize Your Installation</strong></p>
-<blockquote>
-<p>[!TIP]
-Define your custom variables. The <code>username</code>, <code>password</code>, and <code>email</code> are required.</p>
-</blockquote>
+<p><strong>Customize Your Installation</strong>
+TIP:  Define your custom variables. The <code>username</code>, <code>password</code>, and <code>email</code> are required.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;thomas&quot;</span>
 <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;thomas&quot;</span>
 <span class="nv">email</span><span class="o">=</span><span class="s2">&quot;test@me.com&quot;</span>
 </code></pre></div>
 </li>
 </ul>
-<blockquote>
-<p>[!NOTE]
-All flags are optional. If not provided, you will be prompted for the required information during installation.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All flags are optional. If not provided, you will be prompted for the required information during installation.</p>
+</div>
 <ol>
 <li>
 <p><strong>Run the Installer</strong></p>
