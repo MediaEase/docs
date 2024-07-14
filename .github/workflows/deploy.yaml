@@ -76,10 +76,3 @@ jobs:
         with:
           key: mkdocs-material-${{ hashfiles('.cache/**') }}
           path: .cache
-
-      - name: Discord Webhook Action
-        uses: tsickert/discord-webhook@v5.3.0
-        with:
-          webhook-url: ${{ secrets.WEBHOOK_URL }}
-          embed-title: "Documentation Updated"
-          embed-description: "Documentation has been updated. You can view the latest version [here](https://mediaease.github.io/docs)."
