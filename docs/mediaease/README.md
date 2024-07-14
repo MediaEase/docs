@@ -1,12 +1,11 @@
 <h1 align="center">
   <a href="https://github.com/MediaEase/MediaEase">
-    <!-- Please provide path to your logo here -->
     <img src="mediaease.png" alt="Logo" width="100" height="100">
   </a>
 </h1>
 
 <div align="center">
-  MediaEase
+  <h1>MediaEase</h1>
   <br />
   <a href="#about"><strong>Explore the screenshots »</strong></a>
   <br />
@@ -14,22 +13,23 @@
   <a href="https://github.com/MediaEase/MediaEase/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
    · 
   <a href="https://github.com/MediaEase/MediaEase/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
-   · <a href="https://github.com/MediaEase/MediaEase/discussions">Ask a Question</a>
+   · 
+  <a href="https://github.com/MediaEase/MediaEase/discussions">Ask a Question</a>
 </div>
 
 <div align="center">
 <br />
 
-
-|  | |
-|---|---|
-| **Open&#160;Source** | [![BSD 3-clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/MediaEase/MediaEase/blob/main/LICENSE) |
-| **Community** | [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/MediaEase/MediaEase/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)  |
-| **CI/CD** | (coming soon)  |
-| **Maintener** | [![code with love by MediaEase](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-MediaEase-ff1414.svg?style=flat-square)](https://github.com/MediaEase) |
-| **Operating Sytem** | Debian 12 (bookworm) |
-| **Architecture** | 64 Bits · ARM not supported |
-| **Tools** | [![better commits is enabled](https://img.shields.io/badge/better--commits-enabled?style=for-the-badge&logo=git&color=a6e3a1&logoColor=D9E0EE&labelColor=302D41)](https://github.com/Everduin94/better-commits) |
+|                      |                                                                                                                                                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Open Source**      | [![BSD 3-clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/MediaEase/MediaEase/blob/main/LICENSE)                                                                      |
+| **Community**        | [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/MediaEase/MediaEase/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)               |
+| **CI/CD**            | (coming soon)                                                                                                                                                                                                   |
+| **Maintainer**       | [![code with love by MediaEase](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-MediaEase-ff1414.svg?style=flat-square)](https://github.com/MediaEase)                                           |
+| **Operating System** | Debian 12 (bookworm)                                                                                                                                                                                            |
+| **Architecture**     | 64 Bits · ARM not supported                                                                                                                                                                                     |
+| **Tools**            | [![better commits is enabled](https://img.shields.io/badge/better--commits-enabled?style=for-the-badge&logo=git&color=a6e3a1&logoColor=D9E0EE&labelColor=302D41)](https://github.com/Everduin94/better-commits) |
+| **Status**           | [![stability-alpha](https://img.shields.io/badge/stability-alpha-f4d03f.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#alpha)                                                 |
 
 </div>
 
@@ -37,11 +37,12 @@
 <summary>Table of Contents</summary>
 
 - [About](#about)
-  - [Built With](#built-with)
+- [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
+    - [Additional Options](#additional-options)
+  - [Full Example](#full-example)
 - [Roadmap](#roadmap)
 - [Support](#support)
 - [Project assistance](#project-assistance)
@@ -59,19 +60,15 @@
 
 <table><tr><td>
 
-> **[?]**
-> Provide general information about your project here.
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> Why did you undertake it?
-> You don't have to answer all the questions -- just the ones relevant to your project.
+**MediaEase**  is a comprehensive solution designed to simplify the installation and management of media server applications on a dedicated Debian server. By providing an all-in-one platform, **MediaEase** automates the setup and maintenance of applications like Plex, Sonarr, and rTorrent, making the process accessible and user-friendly even for those with limited technical knowledge.
+
+The primary goal of **MediaEase** is to save users time and effort by eliminating the need for complex manual configurations. It ensures a seamless experience, allowing users to focus on enjoying their media rather than dealing with the technical details of server management.
+
+For a better read, and additional informations, you can check the [documentation here](https://mediaease.github.io/docs)
 
 <details>
 <summary>Screenshots</summary>
 <br>
-
-> **[?]**
-> Please provide your screenshots here.
 
 |                               Home Page                               |                               Login Page                               |
 | :-------------------------------------------------------------------: | :--------------------------------------------------------------------: |
@@ -81,28 +78,81 @@
 
 </td></tr></table>
 
-### Built With
+## Built With
 
-> **[?]**
-> Bash, PHP, Composer, Symfony
+- **Bash**: For scripting and automating tasks.
+- **PHP**: The core language for the backend logic.
+- **Composer**: Dependency manager for PHP.
+- **Symfony**: The PHP framework used to build the web application.
+- **NPM**: Node package manager for managing frontend dependencies.
 
 ## Getting Started
 
+To get a local copy up and running, follow these simple steps.
+
 ### Prerequisites
 
-> **[?]**
-> What are the project requirements/dependencies?
+Before you begin, ensure you have met the following requirements:
+
+- **Operating System**: Fresh Debian 12 (Bookworm) server. More distributions support will come later.
+
+> [!WARNING]
+> If you want to set up a RAID array during the installation (yes, MediaEase can do it for you!), you may refer to the [Set Up a RAID Array](https://mediaease.github.io/docs/mediaease/GETTING_STARTED).
+
 
 ### Installation
 
-> **[?]**
-> Describe how to install and get started with the project.
+1. **Switch to the Root User**
 
-## Usage
+    ```bash
+    sudo -i
+    ```
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+2. **Download the installer**
+  - Using wget:
+  
+   `wget -qO setup.sh https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh && chmod +x setup.sh`
+  
+  - Using curl :
+    `curl -sSL https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh -o setup.sh && chmod +x setup.sh`
+
+3. **Customize Your Installation**
+> [!TIP]
+> Define your custom variables. The `username`, `password`, and `email` are required.
+
+    ```bash
+    username="thomas"
+    password="thomas"
+    email="test@me.com"
+    ```
+
+> [!NOTE]
+> All flags are optional. If not provided, you will be prompted for the required information during installation.
+
+4. **Run the Installer**
+
+    To install with the customized settings, use the following command:
+
+    ```bash
+    ./setup.sh -u $username -p $password -e $email
+    ```
+
+#### Additional Options
+
+
+### Full Example
+
+```bash
+username="john"
+password="superpassword"
+email="test@me.com"
+ports="4747,5757"
+raid="0,ext4,/home,md10"
+domain="mediaease.io"
+lang="en"
+vault_salt="youllneverguessit"
+./setup.sh -u $username -p $password -e $email --ports $ports --raid $raid -d $domain --lang $lang -vs $vault_salt
+```
 
 ## Roadmap
 
@@ -114,16 +164,13 @@ See the [open issues](https://github.com/MediaEase/MediaEase/issues) for a list 
 
 ## Support
 
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
-
-| Documentation              | Status                                                         |
-| -------------------------- | -------------------------------------------------------------- |
-| :bug: **[User Guides]** | Coming soon |
-| :bug: **[Api Reference]** | Coming soon |
-| :bug: **[Changelog]** | Coming soon |
-| :bug: **[Roadmap]** | [open issues](https://github.com/MediaEase/MediaEase/issues) · [GitHub Discussions](https://github.com/MediaEase/MediaEase/discussions) |
-| :bug: **[Available Softwares]** | Coming soon |
+| Documentation                   | Status                                                                                                                                  |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| :bug: **[User Guides]**         | Coming soon                                                                                                                             |
+| :bug: **[Api Reference]**       | Coming soon                                                                                                                             |
+| :bug: **[Changelog]**           | Coming soon                                                                                                                             |
+| :bug: **[Roadmap]**             | [open issues](https://github.com/MediaEase/MediaEase/issues) · [GitHub Discussions](https://github.com/MediaEase/MediaEase/discussions) |
+| :bug: **[Available Softwares]** | Coming soon                                                                                                                             |
 
 ## Project assistance
 
