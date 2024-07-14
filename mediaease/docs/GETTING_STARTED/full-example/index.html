@@ -738,6 +738,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Full Example
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -747,6 +758,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Breakdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-command-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Command Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1203,6 +1260,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Breakdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-command-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Command Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1233,6 +1325,8 @@
 
 
 <h1 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h1>
+<p>This example demonstrates how to run the setup.sh script with various options to configure your environment.</p>
+<h3 id="example-command">Example Command<a class="headerlink" href="#example-command" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;john&quot;</span>
 <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;superpassword&quot;</span>
 <span class="nv">email</span><span class="o">=</span><span class="s2">&quot;test@me.com&quot;</span>
@@ -1243,6 +1337,49 @@
 <span class="nv">vault_salt</span><span class="o">=</span><span class="s2">&quot;youllneverguessit&quot;</span>
 ./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span>
 </code></pre></div>
+<p>Parameter Descriptions</p>
+<p><code>username</code>: The username for the setup. In this example, it's set to john.
+<code>password</code>: The password for the user. Here, it's set to superpassword.
+<code>email</code>: The email address associated with the user. This example uses test@me.com.
+<code>ports</code>: A comma-separated list of ports to be used. In this case, 4747 and 5757.
+<code>raid</code>: RAID configuration settings, which include:
+    RAID level (e.g., 0)
+    File system type (e.g., ext4)
+    Mount point (e.g., /home)
+    Device name (e.g., md10)
+<code>domain</code>: The domain name for your setup. Here, it's mediaease.io.
+<code>lang</code>: The language setting for the setup. In this example, it's set to English (en).
+<code>vault_salt</code>: A salt value for securing your vault. This example uses youllneverguessit.</p>
+<h3 id="command-breakdown">Command Breakdown<a class="headerlink" href="#command-breakdown" title="Permanent link">&para;</a></h3>
+<p><code>./setup.sh</code>: The script to execute.
+<code>-u $username</code>: Sets the username.
+<code>-p $password</code>: Sets the password.
+<code>-e $email</code>: Sets the email address.
+<code>--ports $ports</code>: Sets the ports.
+<code>--raid $raid</code>: Configures RAID settings.
+<code>-d $domain</code>: Sets the domain name.
+<code>--lang $lang</code>: Sets the language.
+<code>-vs $vault_salt</code>: Sets the vault salt.</p>
+<h3 id="complete-command-example">Complete Command Example<a class="headerlink" href="#complete-command-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;john&quot;</span>
+<span class="nv">password</span><span class="o">=</span><span class="s2">&quot;superpassword&quot;</span>
+<span class="nv">email</span><span class="o">=</span><span class="s2">&quot;test@me.com&quot;</span>
+<span class="nv">ports</span><span class="o">=</span><span class="s2">&quot;4747,5757&quot;</span>
+<span class="nv">raid</span><span class="o">=</span><span class="s2">&quot;0,ext4,/home,md10&quot;</span>
+<span class="nv">domain</span><span class="o">=</span><span class="s2">&quot;mediaease.io&quot;</span>
+<span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span>
+<span class="nv">vault_salt</span><span class="o">=</span><span class="s2">&quot;youllneverguessit&quot;</span>
+
+./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that the setup.sh script is executable. If not, make it executable using:
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>setup.sh
+</code></pre></div>
+NOTE:  Double-check all parameter values for accuracy before executing the command.</p>
+</div>
+<p>By following this example, you can easily customize and run the setup.sh script to suit your specific requirements.</p>
 
 
 
