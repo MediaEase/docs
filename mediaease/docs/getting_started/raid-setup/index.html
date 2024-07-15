@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://mediaease.github.io/mediaease/docs/getting_started/raid-setup/">
       
       
-        <link rel="prev" href="../additional-options/">
+        <link rel="prev" href="../domain/">
       
       
         <link rel="next" href="../full-example/">
@@ -710,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../domain.md" class="md-nav__link">
+      <a href="../domain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,6 +740,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configure Raid Array
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -749,6 +760,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raid-options-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raid Options Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1226,6 +1274,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raid-options-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raid Options Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1256,20 +1330,65 @@
 
 
 <h1 id="set-up-a-raid-array">Set Up a RAID Array<a class="headerlink" href="#set-up-a-raid-array" title="Permanent link">&para;</a></h1>
-<p>Add the <code>--raid</code> flag with a comma-separated list. Example configurations:</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>To set up a RAID array, you can add the <code>--raid</code> flag with a comma-separated list of parameters. Below are example configurations:</p>
 <ul>
 <li><code>raid 0,ext4,/opt,md69</code></li>
 <li><code>raid 5,btrfs,/home,md20</code></li>
 </ul>
 <p>Alternatively, you can use the default <code>--raid</code> (with no arguments), which will set up as <code>raid 0,ext4,/home,md10</code>.</p>
+<p>Here are some example commands:
 <div class="highlight"><pre><span></span><code>./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--raid
 
 <span class="c1"># or</span>
 
 <span class="nv">raid</span><span class="o">=</span><span class="s2">&quot;10,btrfs,/mnt,md15&quot;</span>
 ./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span>
-</code></pre></div>
-<p><a href="../domain-setup/">Continue to Install a Domain</a></p>
+</code></pre></div></p>
+<h2 id="raid-options-support">Raid Options Support<a class="headerlink" href="#raid-options-support" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>RAID Level</th>
+<th>RAID Format</th>
+<th>Mount Point</th>
+<th>RAID Name</th>
+<th>Conditions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td><code>btrfs</code> or  <code>ext4</code> or <code>xfs</code></td>
+<td>(path you want)</td>
+<td>mdX*</td>
+<td>4 disks or more</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>btrfs</code> or  <code>ext4</code> or <code>xfs</code></td>
+<td>(path you want)</td>
+<td>mdX*</td>
+<td>4 disks or more</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>btrfs</code> or  <code>ext4</code> or <code>xfs</code></td>
+<td>(path you want)</td>
+<td>mdX*</td>
+<td>3 disks or more</td>
+</tr>
+<tr>
+<td>0</td>
+<td><code>btrfs</code> or  <code>ext4</code> or <code>xfs</code></td>
+<td>(path you want)</td>
+<td>mdX*</td>
+<td>2 disks or more</td>
+</tr>
+</tbody>
+</table>
+<p>*<code>mdX</code> is a common name. <code>X</code> represents a number while <code>md</code> is the standard prefix used for RAID device names in Linux.</p>
+<p><a href="../domain/">Continue to Install a Domain</a></p>
 
 
 
@@ -1305,7 +1424,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../additional-options/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Additional Options">
+          <a href="../domain/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configure a Domain">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1315,7 +1434,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Additional Options
+                Configure a Domain
               </div>
             </div>
           </a>
