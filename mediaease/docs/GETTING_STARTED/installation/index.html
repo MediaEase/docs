@@ -675,6 +675,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -684,6 +695,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#switch-to-the-root-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switch to the Root User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the Installer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-your-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customize Your Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Installer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1203,6 +1269,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#switch-to-the-root-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switch to the Root User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the Installer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-your-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customize Your Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Installer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1233,27 +1343,24 @@
 
 
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<ol>
-<li>
-<p><strong>Switch to the Root User</strong></p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-i
+<h2 id="switch-to-the-root-user">Switch to the Root User<a class="headerlink" href="#switch-to-the-root-user" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>```bash
+sudo -i
+```
 </code></pre></div>
-</li>
-<li>
-<p><strong>Download the Installer</strong></p>
-<ul>
-<li>Using wget:</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-qO<span class="w"> </span>setup.sh<span class="w"> </span>https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>setup.sh
+<h2 id="download-the-installer">Download the Installer<a class="headerlink" href="#download-the-installer" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>- Using wget:
+
+```bash
+wget -qO setup.sh https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh &amp;&amp; chmod +x setup.sh
+```
+- Using curl:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh -o setup.sh &amp;&amp; chmod +x setup.sh
+```
 </code></pre></div>
-- Using curl:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh<span class="w"> </span>-o<span class="w"> </span>setup.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>setup.sh
-</code></pre></div>
-</li>
-<li>
-<p><strong>Customize Your Installation</strong></p>
-</li>
-</ol>
+<h2 id="customize-your-installation">Customize Your Installation<a class="headerlink" href="#customize-your-installation" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Define your custom variables. The <code>username</code>, <code>password</code>, and <code>email</code> are required.</p>
@@ -1266,14 +1373,13 @@
 <p class="admonition-title">Note</p>
 <p>All flags are optional. If not provided, you will be prompted for the required information during installation.</p>
 </div>
-<ol>
-<li>
-<p><strong>Run the Installer</strong></p>
-<p>To install with the customized settings, use the following command:</p>
-<div class="highlight"><pre><span></span><code>./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span>
+<h2 id="run-the-installer">Run the Installer<a class="headerlink" href="#run-the-installer" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>To install with the customized settings, use the following command:
+
+```bash
+./setup.sh -u $username -p $password -e $email
+```
 </code></pre></div>
-</li>
-</ol>
 <p><a href="../additional-options/">Continue to Additional Options</a></p>
 
 
