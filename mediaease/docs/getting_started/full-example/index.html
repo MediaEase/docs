@@ -807,6 +807,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#parameter-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Descriptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
       Command Breakdown
@@ -1299,6 +1308,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#parameter-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Descriptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
       Command Breakdown
@@ -1360,29 +1378,34 @@
 <span class="nv">vault_salt</span><span class="o">=</span><span class="s2">&quot;youllneverguessit&quot;</span>
 ./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span>
 </code></pre></div>
-<p>Parameter Descriptions</p>
-<p><code>username</code>: The username for the setup. In this example, it's set to john.
-<code>password</code>: The password for the user. Here, it's set to superpassword.
-<code>email</code>: The email address associated with the user. This example uses test@me.com.
-<code>ports</code>: A comma-separated list of ports to be used. In this case, 4747 and 5757.
-<code>raid</code>: RAID configuration settings, which include:
+<h3 id="parameter-descriptions">Parameter Descriptions<a class="headerlink" href="#parameter-descriptions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>username</code>: The username for the setup. In this example, it's set to john.</li>
+<li><code>password</code>: The password for the user. Here, it's set to superpassword.</li>
+<li><code>email</code>: The email address associated with the user. This example uses test@me.com.</li>
+<li><code>ports</code>: A comma-separated list of ports to be used. In this case, 4747 and 5757.</li>
+<li><code>raid</code>: RAID configuration settings, which include:
     RAID level (e.g., 0)
     File system type (e.g., ext4)
     Mount point (e.g., /home)
     Device name (e.g., md10)
-<code>domain</code>: The domain name for your setup. Here, it's mediaease.io.
-<code>lang</code>: The language setting for the setup. In this example, it's set to English (en).
-<code>vault_salt</code>: A salt value for securing your vault. This example uses youllneverguessit.</p>
+    <a href="../raid-setup/">see more about raid</a></li>
+<li><code>domain</code>: The domain name for your setup. Here, it's mediaease.io.</li>
+<li><code>lang</code>: The language setting for the setup. In this example, it's set to English (en).</li>
+<li><code>vault_salt</code>: A salt value for securing your vault. This example uses youllneverguessit.</li>
+</ul>
 <h3 id="command-breakdown">Command Breakdown<a class="headerlink" href="#command-breakdown" title="Permanent link">&para;</a></h3>
-<p><code>./setup.sh</code>: The script to execute.
-<code>-u $username</code>: Sets the username.
-<code>-p $password</code>: Sets the password.
-<code>-e $email</code>: Sets the email address.
-<code>--ports $ports</code>: Sets the ports.
-<code>--raid $raid</code>: Configures RAID settings.
-<code>-d $domain</code>: Sets the domain name.
-<code>--lang $lang</code>: Sets the language.
-<code>-vs $vault_salt</code>: Sets the vault salt.</p>
+<ul>
+<li><code>./setup.sh</code>: The script to execute.</li>
+<li><code>-u $username</code>: Sets the username.</li>
+<li><code>-p $password</code>: Sets the password.</li>
+<li><code>-e $email</code>: Sets the email address.</li>
+<li><code>--ports $ports</code>: Sets the ports.</li>
+<li><code>--raid $raid</code>: Configures RAID settings.</li>
+<li><code>-d $domain</code>: Sets the domain name.</li>
+<li><code>--lang $lang</code>: Sets the language.</li>
+<li><code>-vs $vault_salt</code>: Sets the vault salt.</li>
+</ul>
 <h3 id="complete-command-example">Complete Command Example<a class="headerlink" href="#complete-command-example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;john&quot;</span>
 <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;superpassword&quot;</span>
