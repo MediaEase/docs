@@ -1262,30 +1262,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#additional-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#full-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Full Example
-    </span>
-  </a>
-  
 </li>
         
       </ul>
@@ -1439,8 +1415,6 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-    - [Additional Options](#additional-options)
-  - [Full Example](#full-example)
 - [Roadmap](#roadmap)
 - [Support](#support)
 - [Project assistance](#project-assistance)
@@ -1489,61 +1463,8 @@ For a better read, and additional informations, you can check the [documentation
 <ul>
 <li><strong>Operating System</strong>: Fresh Debian 12 (Bookworm) server. More distributions support will come later.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you want to set up a RAID array during the installation (yes, MediaEase can do it for you!), you may refer to the <a href="https://mediaease.github.io/docs/mediaease/GETTING_STARTED">Set Up a RAID Array</a>.</p>
-</div>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p><strong>Switch to the Root User</strong></p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-i
-</code></pre></div>
-</li>
-<li>
-<p><strong>Download the installer</strong></p>
-</li>
-<li>Using wget:</li>
-</ol>
-<p><code>wget -qO setup.sh https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh &amp;&amp; chmod +x setup.sh</code></p>
-<ul>
-<li>
-<p>Using curl :
-    <code>curl -sSL https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh -o setup.sh &amp;&amp; chmod +x setup.sh</code></p>
-</li>
-<li>
-<p><strong>Customize Your Installation</strong>
-TIP:  Define your custom variables. The <code>username</code>, <code>password</code>, and <code>email</code> are required.</p>
-<div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;thomas&quot;</span>
-<span class="nv">password</span><span class="o">=</span><span class="s2">&quot;thomas&quot;</span>
-<span class="nv">email</span><span class="o">=</span><span class="s2">&quot;test@me.com&quot;</span>
-</code></pre></div>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>All flags are optional. If not provided, you will be prompted for the required information during installation.</p>
-</div>
-<ol>
-<li>
-<p><strong>Run the Installer</strong></p>
-<p>To install with the customized settings, use the following command:</p>
-<div class="highlight"><pre><span></span><code>./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span>
-</code></pre></div>
-</li>
-</ol>
-<h4 id="additional-options">Additional Options<a class="headerlink" href="#additional-options" title="Permanent link">&para;</a></h4>
-<h3 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;john&quot;</span>
-<span class="nv">password</span><span class="o">=</span><span class="s2">&quot;superpassword&quot;</span>
-<span class="nv">email</span><span class="o">=</span><span class="s2">&quot;test@me.com&quot;</span>
-<span class="nv">ports</span><span class="o">=</span><span class="s2">&quot;4747,5757&quot;</span>
-<span class="nv">raid</span><span class="o">=</span><span class="s2">&quot;0,ext4,/home,md10&quot;</span>
-<span class="nv">domain</span><span class="o">=</span><span class="s2">&quot;mediaease.io&quot;</span>
-<span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span>
-<span class="nv">vault_salt</span><span class="o">=</span><span class="s2">&quot;youllneverguessit&quot;</span>
-./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span>
-</code></pre></div>
+<p>Please, refer to the <a href="https://mediaease.github.io/docs/mediaease/docs/getting_started/">Getting Started</a> guide to know how to install MediaEase and customize your installation.</p>
 <h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
 <p>See the <a href="https://github.com/MediaEase/MediaEase/issues">open issues</a> for a list of proposed features (and known issues).</p>
 <ul>
