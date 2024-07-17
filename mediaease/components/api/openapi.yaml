@@ -9,7 +9,7 @@ info:
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
-  version: 
+  version: 0.1.0
 security:
 - Bearer: []
 - apiKey: []
