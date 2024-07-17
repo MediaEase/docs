@@ -1,46 +1,55 @@
-site_name: MediaEase Project
+site_name: MediaEase
 site_url: https://mediaease.github.io/
 site_description: Official documentation for the MediaEase Project
 site_author: tomcdj71
 
-repo_url: htttps://github.com/MediaEase/MediaEase
+repo_url: https://github.com/MediaEase/MediaEase
 repo_name: MediaEase/docs
 edit_uri: blob/main/docs/
 
 # Copyright
 copyright: Copyright &copy; 2024 MediaEase
-nav:
-  - Home: index.md
-  - Code Of Conduct: resources/CODE_OF_CONDUCT.md
-  - Contributing: resources/CONTRIBUTING.md
-  - License: resources/LICENSE.md
-  - Security: resources/SECURITY.md
-  - HarmonyUI:
-    - Home: harmonyui/README.md
-    - Getting Started: harmonyui/GETTING_STARTED.md
-    - User Guide: harmonyui/USER_GUIDE.md
-    - Developer Guide: harmonyui/DEVELOPER_GUIDE.md
-  - Api Reference: api/index.html
-  - MediaEase:
-    - Home: mediaease/README.md
-    - Getting Started: mediaease/GETTING_STARTED.md
-    - Zen Scripts: 
-      - Home: indexes/scripts-index.md
-      - command Reference: 
-        - Home: indexes/command-index.md
-        - api: scripts/command/api/README.md
-        - set: scripts/command/set/README.md
-        - software:  scripts/command/software/
-        - support: scripts/command/support/README.md
-        - user: scripts/command/user/
-    - Softwares: 
-      - Home: scripts/software/README.md
-      - Official: scripts/software/official.md
-      - Community: scripts/software/community.md
-    - User Guide: mediaease/USER_GUIDE.md
-    - Developer Guide: mediaease/DEVELOPER_GUIDE.md
 
-theme: 
+nav:
+  - Getting Started:
+      - Overview: mediaease/getting_started/index.md
+      - Installation: mediaease/getting_started/installation.md
+      - Additional Options: mediaease/getting_started/additional-options.md
+      - Configure a Domain: mediaease/getting_started/domain.md
+      - Configure a RAID Array: mediaease/getting_started/raid-setup.md
+      - Full Example: mediaease/getting_started/full-example.md
+  - User Guide: mediaease/USER_GUIDE.md
+  - Developer Guide: mediaease/DEVELOPER_GUIDE.md
+  - Components:
+      - HarmonyUI: mediaease/components/harmonyui/README.md
+      - Zen: mediaease/components/zen/README.md
+      - Mflibs: mediaease/components/mflibs/README.md
+      - Binaries: mediaease/components/binaries/README.md
+  - API Reference: mediaease/components/api/index.html
+  - Zen Scripts:
+      - Overview: indexes/scripts-index.md
+      - Software:
+          - Overview: scripts/software/README.md
+          - Official: scripts/software/official.md
+          - Community: scripts/software/community.md
+      - Command Reference:
+          - Overview: indexes/command-index.md
+          - API: scripts/command/api/README.md
+          - Set: scripts/command/set/README.md
+          - Software: scripts/command/software/README.md
+          - Support: scripts/command/support/README.md
+          - User: scripts/command/user/README.md
+  - About:
+      - MediaEase: about/mediaease.md
+      - HarmonyUI: about/harmonyui.md
+      - Zen: about/zen.md
+  - Contributing:
+      - Code of Conduct: resources/CODE_OF_CONDUCT.md
+      - Contributing: resources/CONTRIBUTING.md
+      - License: resources/LICENSE.md
+      - Security: resources/SECURITY.md
+
+theme:
   name: material
   features:
     - announce.dismiss
@@ -98,6 +107,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - callouts
   - toc:
       permalink: true
   - tables

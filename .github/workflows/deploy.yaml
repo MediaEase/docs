@@ -19,7 +19,6 @@ jobs:
     name: Build documentation
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -29,7 +28,14 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-      
+
+      - name: Create virtual environment and install dependencies
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install mkdocs-material mkdocs-material[recommended,git,imaging] markdown-callouts
+
       - name: Set up build cache
         uses: actions/cache/restore@v3
         with:
@@ -38,18 +44,14 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - name: Install dependencies
+      - name: Install system dependencies
         run: sudo apt-get install pngquant
-
-      - name: Install Python dependencies
-        run: |
-          pip install mkdocs-material
-          pip install mkdocs-material[recommended,git,imaging]
 
       - name: Build documentation
         env:
           GITHUB_TOKEN: ${{ secrets.MEDIAEASE_ACCESS_TOKEN }}
         run: |
+          source venv/bin/activate
           mkdocs build --clean
           mkdocs --version
 
@@ -66,9 +68,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          python3 -m venv venv
           source venv/bin/activate
-          venv/bin/pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-material[recommended,git,imaging]
           mkdocs gh-deploy --force
 
       - name: Save build cache

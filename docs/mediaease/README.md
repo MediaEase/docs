@@ -41,8 +41,6 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-    - [Additional Options](#additional-options)
-  - [Full Example](#full-example)
 - [Roadmap](#roadmap)
 - [Support](#support)
 - [Project assistance](#project-assistance)
@@ -96,63 +94,9 @@ Before you begin, ensure you have met the following requirements:
 
 - **Operating System**: Fresh Debian 12 (Bookworm) server. More distributions support will come later.
 
-> [!WARNING]
-> If you want to set up a RAID array during the installation (yes, MediaEase can do it for you!), you may refer to the [Set Up a RAID Array](https://mediaease.github.io/docs/mediaease/GETTING_STARTED).
-
-
 ### Installation
 
-1. **Switch to the Root User**
-
-    ```bash
-    sudo -i
-    ```
-
-2. **Download the installer**
-  - Using wget:
-  
-   `wget -qO setup.sh https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh && chmod +x setup.sh`
-  
-  - Using curl :
-    `curl -sSL https://raw.githubusercontent.com/MediaEase/MediaEase/develop/setup.sh -o setup.sh && chmod +x setup.sh`
-
-3. **Customize Your Installation**
-> [!TIP]
-> Define your custom variables. The `username`, `password`, and `email` are required.
-
-    ```bash
-    username="thomas"
-    password="thomas"
-    email="test@me.com"
-    ```
-
-> [!NOTE]
-> All flags are optional. If not provided, you will be prompted for the required information during installation.
-
-4. **Run the Installer**
-
-    To install with the customized settings, use the following command:
-
-    ```bash
-    ./setup.sh -u $username -p $password -e $email
-    ```
-
-#### Additional Options
-
-
-### Full Example
-
-```bash
-username="john"
-password="superpassword"
-email="test@me.com"
-ports="4747,5757"
-raid="0,ext4,/home,md10"
-domain="mediaease.io"
-lang="en"
-vault_salt="youllneverguessit"
-./setup.sh -u $username -p $password -e $email --ports $ports --raid $raid -d $domain --lang $lang -vs $vault_salt
-```
+Please, refer to the [Getting Started](https://mediaease.github.io/docs/mediaease/docs/getting_started/) guide to know how to install MediaEase and customize your installation.
 
 ## Roadmap
 

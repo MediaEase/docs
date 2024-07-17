@@ -4,7 +4,7 @@ extends:
   - recommended
 apis:
   main:
-    root: ./docs/api/api/openapi.yaml
+    root: ./docs/mediaease/components/api/openapi.yaml
 rules:
   no-empty-servers: off
   info-license: off
@@ -12,7 +12,7 @@ rules:
   no-invalid-media-type-examples: off
 theme:
   openapi:
-    htmlTemplate: ./docs/api/index.html
+    htmlTemplate: ./docs/mediaease/components/api/index.html
     theme:
       colors:
         primary:
