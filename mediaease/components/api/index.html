@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HarmonyUI API Reference</title>
+    <!-- needed for adaptive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        img-src 'self' data:;
+        script-src 'self' unpkg.com;
+        style-src 'self' 'unsafe-inline';
+        font-src 'self' fonts.googleapis.com fonts.gstatic.com
+        ">
+    <style>
+        .version-selector {
+            padding: revert;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+    <script type="text/javascript" src="./scripts.js"></script>
+</head>
+
+<body>
+    <rapi-doc id="rapidoc" schema-style="table" show-header="false" schema-description-expanded="true"
+        spec-url="./openapi.yaml" theme="dark" render-style="focused" show-method-in-nav-bar="as-colored-block"
+        default-schema-tab="example" fill-request-fields-with-example="true" sort-endpoints-by="method"
+        use-path-in-nav-bar="true">
+        <div slot="nav-logo" class="version-selector">
+            <label for="version-selector">Version:</label>
+            <select id="version-selector"></select>
+        </div>
+    </rapi-doc>
+</body>
+
+</html>
