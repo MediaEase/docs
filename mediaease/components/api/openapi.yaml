@@ -6,14 +6,10 @@ info:
   termsOfService: https:///github.com/MediaEase/HarmonyUI/tos
   contact:
     name: MediaEase
-    url: htttps://github.com/MediaEase/MediaEase
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
-  version: 1.0.0
-servers:
-- url: http://localhost:8000
-  description: Local development server
+  version: 
 security:
 - Bearer: []
 - apiKey: []
@@ -952,7 +948,6 @@ components:
       properties:
         name:
           type: string
-        url:
           type: string
         icon:
           type: string
