@@ -191,16 +191,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mediaease.github.io/mediaease/components/zen/apps/official/plex_debrid/plex_debrid/</loc>
-         <lastmod>2024-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mediaease.github.io/mediaease/components/zen/apps/official/radarr/radarr/</loc>
-         <lastmod>2024-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://mediaease.github.io/mediaease/components/zen/commands/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
@@ -261,11 +251,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mediaease.github.io/mediaease/components/zen/modules/app_functions/</loc>
-         <lastmod>2024-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://mediaease.github.io/mediaease/components/zen/modules/apt_functions/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
@@ -287,11 +272,6 @@
     </url>
     <url>
          <loc>https://mediaease.github.io/mediaease/components/zen/modules/links/</loc>
-         <lastmod>2024-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mediaease.github.io/mediaease/components/zen/modules/logger/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
