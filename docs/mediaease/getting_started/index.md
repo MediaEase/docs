@@ -63,5 +63,6 @@ Explore additional setup options to further customize your MediaEase installatio
   [Beta Branch]: additional-options.md#run-with-beta-branch-unstable
   [Set Language]: additional-options.md#choose-a-different-language
   [Change Ports]: additional-options.md#change-default-sshftp-ports
+  [Change Hostname]:  additional-options.md#change-hostname
 
 [Continue to Installation](installation.md)
