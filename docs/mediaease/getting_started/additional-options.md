@@ -11,17 +11,9 @@ lang="en"
 
 TIP:  Changing the language can be particularly useful for non-English speaking users to have a more intuitive interface.
 
-## Change Hostname
-By default, MediaEase will setup the "mediaease-server" hostname. You can change it by using the `--hostname flag`
-
-```bash
-hostname="mediaease-server"
-./setup.sh -u $username -p $password -e $email --hostname $hostname
-```
-
 ## Change Default SSH/FTP Ports
 
-By default, MediaEase will set up port 4747 for SSH/SFTP and port 5757 for FTP. You can change the ports with the `--ports` flag and a comma-separated list.
+By default, MediaEase will set up port 4747 for SSH/SFTP and port 5757 for FTP. You can change the ports with the --ports flag and a comma-separated list.
 
 ```bash
 ports="4747,5757"
