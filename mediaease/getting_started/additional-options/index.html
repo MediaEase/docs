@@ -418,15 +418,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#change-hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      Change Hostname
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#change-default-sshftp-ports" class="md-nav__link">
     <span class="md-ellipsis">
       Change Default SSH/FTP Ports
@@ -1418,15 +1409,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#change-hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      Change Hostname
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#change-default-sshftp-ports" class="md-nav__link">
     <span class="md-ellipsis">
       Change Default SSH/FTP Ports
@@ -1512,13 +1494,8 @@
 <p class="admonition-title">Tip</p>
 <p>Changing the language can be particularly useful for non-English speaking users to have a more intuitive interface.</p>
 </div>
-<h2 id="change-hostname">Change Hostname<a class="headerlink" href="#change-hostname" title="Permanent link">&para;</a></h2>
-<p>By default, MediaEase will setup the "mediaease-server" hostname. You can change it by using the <code>--hostname flag</code></p>
-<div class="highlight"><pre><span></span><code><span class="nv">hostname</span><span class="o">=</span><span class="s2">&quot;mediaease-server&quot;</span>
-./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--hostname<span class="w"> </span><span class="nv">$hostname</span>
-</code></pre></div>
 <h2 id="change-default-sshftp-ports">Change Default SSH/FTP Ports<a class="headerlink" href="#change-default-sshftp-ports" title="Permanent link">&para;</a></h2>
-<p>By default, MediaEase will set up port 4747 for SSH/SFTP and port 5757 for FTP. You can change the ports with the <code>--ports</code> flag and a comma-separated list.</p>
+<p>By default, MediaEase will set up port 4747 for SSH/SFTP and port 5757 for FTP. You can change the ports with the --ports flag and a comma-separated list.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">ports</span><span class="o">=</span><span class="s2">&quot;4747,5757&quot;</span>
 ./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span>
 </code></pre></div>
