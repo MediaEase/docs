@@ -53,6 +53,7 @@ A **salted password** refers to a password that has been appended or prepended w
 The **MediaEase Secure Vault** is a critical component of your system, designed for securely storing sensitive data such as application passwords, VPN credentials, and more. The vault is totally unique to each installation, with its content obfuscated to ensure that only you, the system administrator, can access it.
 
 - **User Salt:** Before performing any operations in the Secure Vault, such as revealing a password or updating app credentials, you must provide your user salt. This adds an extra layer of security by ensuring that only authorized users can access sensitive information.
+- **Salt Generation:** If the salt is auto-generated during installation (while not using the `-vs` or `--vault-salt` flags), you will see the generated salt only once during the installation process. **Make sure to save it somewhere safe** because the salt cannot be changed later.
 - **Master Passwords:** Some "master" passwords within the vault are encrypted in a way that they cannot be decoded, even by the system administrator, for security reasons.
 - **Security of the Vault:** The use of salted passwords and obfuscation techniques ensures that the data stored in the Secure Vault remains inaccessible to unauthorized users, protecting your system’s integrity.
 
