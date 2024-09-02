@@ -34,10 +34,12 @@ Follow the detailed instructions to install HarmonyUI, the full MediaEase system
 - :material-book-open: __[Prerequisites]__ – Ensure you have all the necessary prerequisites before beginning the installation.
 - :material-cloud-upload: __[HarmonyUI Standalone Installation]__ – Step-by-step instructions to install only HarmonyUI.
 - :material-cloud-upload: __[MediaEase Full Installation]__ – Comprehensive guide to install the full MediaEase project, including HarmonyUI and scripts.
+- :material-playlist-check: __[Variables Requirements]__ - Instructions on how to correctly use the flags when installing.
 </div>
 
 [Prerequisites]: #prerequisites
 [MediaEase Full Installation]: installation.md
+[Variables Requirements]: variables.md
 
 ## Configuration
 Learn how to configure your installation to suit your needs.
@@ -63,5 +65,6 @@ Explore additional setup options to further customize your MediaEase installatio
   [Beta Branch]: additional-options.md#run-with-beta-branch-unstable
   [Set Language]: additional-options.md#choose-a-different-language
   [Change Ports]: additional-options.md#change-default-sshftp-ports
+  [Change Hostname]:  additional-options.md#change-hostname
 
 [Continue to Installation](installation.md)
