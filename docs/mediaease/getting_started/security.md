@@ -28,7 +28,7 @@ By restricting these characters, MediaEase ensures compatibility across various 
 - **Avoid Common Words:** Don't use easily guessable words, such as "password", "123456", or any part of your username.
 - **Avoid Simple Patterns:** Refrain from using patterns like "abcdef" or "123456".
 
-## Example of Strong Passwords
+### Example of Strong Passwords
 
 Here are some examples of strong passwords that meet the MediaEase requirements, with varying lengths for added security:
 
@@ -38,11 +38,23 @@ Here are some examples of strong passwords that meet the MediaEase requirements,
 
 While these examples meet the minimum criteria, consider using a password longer than 6 characters for increased security.
 
-## Handling "Bad" Passwords
+### Handling "Bad" Passwords
 
 If you attempt to use a password that does not meet the above requirements, such as being too short or containing forbidden characters, MediaEase will prompt you to choose another password. This ensures that all users adhere to the security standards necessary to protect the system.
 
 When prompted, review the password guidelines above and create a new password that complies with the requirements. This process helps maintain the security and integrity of your MediaEase installation.
+
+### Password Redaction During Installation
+
+To protect your privacy and security, any passwords entered during the MediaEase installation process are redacted when the installer displays the intro and outro messages. This ensures that your passwords are not visible in any installation logs or screens, reducing the risk of accidental exposure.
+
+### Password Best Practices
+
+To further enhance the security of your password:
+
+- **Use a Unique Password:** Ensure that your MediaEase password is unique and not reused from other accounts.
+- **Avoid Personal Information:** Don’t include easily accessible personal information such as your name, birthdate, or username in your password.
+- **Change Passwords Regularly:** Periodically updating your password can help mitigate the risk of unauthorized access.
 
 ## What is a Salted Password?
 
@@ -56,14 +68,6 @@ The **MediaEase Secure Vault** is a critical component of your system, designed 
 - **Salt Generation:** If the salt is auto-generated during installation (while not using the `-vs` or `--vault-salt` flags), you will see the generated salt only once during the installation process. **Make sure to save it somewhere safe** because the salt cannot be changed later.
 - **Master Passwords:** Some "master" passwords within the vault are encrypted in a way that they cannot be decoded, even by the system administrator, for security reasons.
 - **Security of the Vault:** The use of salted passwords and obfuscation techniques ensures that the data stored in the Secure Vault remains inaccessible to unauthorized users, protecting your system’s integrity.
-
-## Password Best Practices
-
-To further enhance the security of your password:
-
-- **Use a Unique Password:** Ensure that your MediaEase password is unique and not reused from other accounts.
-- **Avoid Personal Information:** Don’t include easily accessible personal information such as your name, birthdate, or username in your password.
-- **Change Passwords Regularly:** Periodically updating your password can help mitigate the risk of unauthorized access.
 
 ## Summary
 
