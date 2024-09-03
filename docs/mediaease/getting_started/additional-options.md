@@ -61,14 +61,4 @@ CAUTION:  The beta branch is considered unstable and may contain bugs or incompl
 > Once you switch to the beta branch, it may not be possible to revert back to the main version without a complete reinstallation. 
 > Proceed with caution.
 
-## Choose the vault salt
-
-By default, MediaEase will generate a vault salt. If you want to choose your vault salt you can add the `-vs` or the `--vault-salt` flag.
-
-```bash
-./setup.sh -u $username -p $password -e $email -vs ThisPasswordShouldBeSecure
-```
-
-To know more about the vault salt, please read [this documentation](security.md#use-of-salted-passwords-in-the-mediaease-secure-vault).
-
 [Continue to Raid Setup Array](raid-setup.md)
