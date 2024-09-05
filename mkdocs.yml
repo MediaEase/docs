@@ -13,11 +13,12 @@ copyright: Copyright &copy; 2024 MediaEase
 nav:
   - Getting Started:
       - Overview: mediaease/getting_started/index.md
-      - Installation: mediaease/getting_started/installation.md
-      - Additional Options: mediaease/getting_started/additional-options.md
-      - Configure a Domain: mediaease/getting_started/domain.md
-      - Configure a RAID Array: mediaease/getting_started/raid-setup.md
-      - Full Example: mediaease/getting_started/full-example.md
+      - Installation:
+          - How to install?: mediaease/getting_started/installation.md
+          - Additional Options: mediaease/getting_started/additional-options.md
+          - Configure a Domain: mediaease/getting_started/domain.md
+          - Configure a RAID Array: mediaease/getting_started/raid-setup.md
+          - Full Example: mediaease/getting_started/full-example.md
   - User Guide: mediaease/components/zen/USER_GUIDE.md
   - Developer Guide: mediaease/components/zen/DEVELOPER_GUIDE.md
   - Components:
