@@ -18,8 +18,8 @@ nav:
       - Configure a Domain: mediaease/getting_started/domain.md
       - Configure a RAID Array: mediaease/getting_started/raid-setup.md
       - Full Example: mediaease/getting_started/full-example.md
-  - User Guide: mediaease/USER_GUIDE.md
-  - Developer Guide: mediaease/DEVELOPER_GUIDE.md
+  - User Guide: mediaease/components/zen/USER_GUIDE.md
+  - Developer Guide: mediaease/components/zen/DEVELOPER_GUIDE.md
   - Components:
       - HarmonyUI: mediaease/components/harmonyui/README.md
       - Zen: mediaease/components/zen/README.md
@@ -27,22 +27,20 @@ nav:
       - Binaries: mediaease/components/binaries/README.md
   - API Reference: mediaease/components/api/index.html
   - Zen Scripts:
-      - Overview: indexes/scripts-index.md
       - Software:
           - Overview: scripts/software/README.md
           - Official: scripts/software/official.md
           - Community: scripts/software/community.md
       - Command Reference:
-          - Overview: indexes/command-index.md
           - API: scripts/command/api/README.md
           - Set: scripts/command/set/README.md
           - Software: scripts/command/software/README.md
           - Support: scripts/command/support/README.md
           - User: scripts/command/user/README.md
   - About:
-      - MediaEase: about/mediaease.md
-      - HarmonyUI: about/harmonyui.md
-      - Zen: about/zen.md
+      - MediaEase: mediaease/README.md
+      - HarmonyUI: mediaease/components/harmonyui/README.md
+      - Zen: mediaease/components/zen/README.md
   - Contributing:
       - Code of Conduct: resources/CODE_OF_CONDUCT.md
       - Contributing: resources/CONTRIBUTING.md
