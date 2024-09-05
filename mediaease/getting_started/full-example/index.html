@@ -550,6 +550,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1394,6 +1412,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1426,7 +1462,7 @@
 
 
 <h1 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h1>
-<p>This example demonstrates how to run the setup.sh script with various options to configure your environment.</p>
+<p>This example demonstrates how to run the <code>setup.sh</code> script with various options to configure your environment.</p>
 <h3 id="example-command">Example Command<a class="headerlink" href="#example-command" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;john&quot;</span>
 <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;superpassword&quot;</span>
@@ -1436,23 +1472,31 @@
 <span class="nv">domain</span><span class="o">=</span><span class="s2">&quot;mediaease.io&quot;</span>
 <span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span>
 <span class="nv">vault_salt</span><span class="o">=</span><span class="s2">&quot;youllneverguessit&quot;</span>
-./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span>
+./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span><span class="w"> </span>--no-lock<span class="w"> </span>--no-reboot
 </code></pre></div>
 <h3 id="parameter-descriptions">Parameter Descriptions<a class="headerlink" href="#parameter-descriptions" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>username</code>: The username for the setup. In this example, it's set to john.</li>
-<li><code>password</code>: The password for the user. Here, it's set to superpassword.</li>
-<li><code>email</code>: The email address associated with the user. This example uses test@me.com.</li>
-<li><code>ports</code>: A comma-separated list of ports to be used. In this case, 4747 and 5757.</li>
-<li><code>raid</code>: RAID configuration settings, which include:
-    RAID level (e.g., 0)
-    File system type (e.g., ext4)
-    Mount point (e.g., /home)
-    Device name (e.g., md10)
-    <a href="../raid-setup/">see more about raid</a></li>
-<li><code>domain</code>: The domain name for your setup. Here, it's mediaease.io.</li>
-<li><code>lang</code>: The language setting for the setup. In this example, it's set to English (en).</li>
-<li><code>vault_salt</code>: A salt value for securing your vault. This example uses youllneverguessit.</li>
+<li><code>username</code>: The username for the setup. In this example, it's set to <strong>john</strong>.</li>
+<li><code>password</code>: The password for the user. Here, it's set to <strong>superpassword</strong>.</li>
+<li><code>email</code>: The email address associated with the user. This example uses <strong>test@me.com</strong>.</li>
+<li><code>ports</code>: A comma-separated list of ports to be used. In this case, <strong>4747</strong> and <strong>5757</strong>.</li>
+<li><code>raid</code>: RAID configuration settings, which include:</li>
+<li>RAID level (e.g., <strong>0</strong>)</li>
+<li>File system type (e.g., <strong>ext4</strong>)</li>
+<li>Mount point (e.g., <strong>/home</strong>)</li>
+<li>Device name (e.g., <strong>md10</strong>)<br />
+<a href="../raid-setup/">See more about RAID setup</a></li>
+<li><code>domain</code>: The domain name for your setup. Here, it's <strong>mediaease.io</strong>.</li>
+<li><code>lang</code>: The language setting for the setup. In this example, it's set to <strong>English (en)</strong>.</li>
+<li><code>vault_salt</code>: A salt value for securing your vault. This example uses <strong>youllneverguessit</strong>.</li>
+<li><code>branch</code>: The branch to use for installation. By default, it's <strong>main</strong>, but you can use <strong>beta</strong> to access the latest unstable features.</li>
+<li><code>verbose</code>: Enables detailed logging during the installation.</li>
+<li><code>hostname</code>: Sets the system hostname. In this example, it's <strong>mediaease-server</strong>.</li>
+<li><code>bypass_prompt</code>: Bypasses any interactive prompts during installation.</li>
+<li><code>no_lock</code>: Disables the generation of the Metapackage to lock installed dependencies.</li>
+<li><code>no_reboot</code>: Prevents the system from rebooting at the end of the installation process. Bypasses the reboot prompt.</li>
+<li><code>virtual_machine</code>: Configures the system for a virtual machine environment.</li>
+<li><code>reboot</code>: Force to reboot at the end of the installation. Bypasses the reboot prompt.</li>
 </ul>
 <h3 id="command-breakdown">Command Breakdown<a class="headerlink" href="#command-breakdown" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1465,6 +1509,13 @@
 <li><code>-d $domain</code>: Sets the domain name.</li>
 <li><code>--lang $lang</code>: Sets the language.</li>
 <li><code>-vs $vault_salt</code>: Sets the vault salt.</li>
+<li><code>-b $branch</code>: Sets the branch for installation (e.g., <strong>main</strong>, <strong>beta</strong>).</li>
+<li><code>--verbose</code>: Enables verbose mode.</li>
+<li><code>--no-lock</code>: Skips the generation of a Metapackage.</li>
+<li><code>--no-reboot</code>: Disables automatic reboot at the end of installation.</li>
+<li><code>--bypass-prompt</code>: Skips prompts that usually require user input.</li>
+<li><code>--hostname $hostname</code>: Configures the system hostname.</li>
+<li><code>--vm</code>: Configures the system for a virtual machine.</li>
 </ul>
 <h3 id="complete-command-example">Complete Command Example<a class="headerlink" href="#complete-command-example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;john&quot;</span>
@@ -1476,17 +1527,22 @@
 <span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span>
 <span class="nv">vault_salt</span><span class="o">=</span><span class="s2">&quot;youllneverguessit&quot;</span>
 
-./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span>
+./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--ports<span class="w"> </span><span class="nv">$ports</span><span class="w"> </span>--raid<span class="w"> </span><span class="nv">$raid</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$domain</span><span class="w"> </span>--lang<span class="w"> </span><span class="nv">$lang</span><span class="w"> </span>-vs<span class="w"> </span><span class="nv">$vault_salt</span><span class="w"> </span>--no-lock<span class="w"> </span>--no-reboot<span class="w"> </span>--hostname<span class="w"> </span>mediaease-server<span class="w"> </span>--bypass-prompt<span class="w"> </span>--verbose
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ensure that the setup.sh script is executable. If not, make it executable using:</p>
-<blockquote>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Metapackage Generation</strong>: By default, MediaEase will generate a Metapackage to lock installed dependencies. You can skip this by using the <code>--no-lock</code> flag if you're confident in your package management.</p>
+</li>
+<li>
+<p><strong>Reboot</strong>: MediaEase will prompt you to reboot after the installation. You can skip this with the <code>--no-reboot</code> flag, but it’s recommended to reboot to ensure all changes are applied.</p>
+</li>
+</ul>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<p>Ensure that the <code>setup.sh</code> script is executable before running the installation. If not, make it executable with:</p>
 <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>setup.sh
 </code></pre></div>
-</blockquote>
-</div>
-<p>By following this example, you can easily customize and run the setup.sh script to suit your specific requirements.</p>
+<p>By following this guide, you can easily customize and execute the <code>setup.sh</code> script according to your needs.</p>
 
 
 
