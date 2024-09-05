@@ -471,6 +471,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#skip-metapackage-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skip Metapackage Generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skip-reboot-after-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skip Reboot After Installation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1471,6 +1489,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#skip-metapackage-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skip Metapackage Generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skip-reboot-after-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skip Reboot After Installation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1555,6 +1591,22 @@ Proceed with caution.</p>
 <div class="highlight"><pre><span></span><code>./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>-vs<span class="w"> </span>ThisPasswordShouldBeSecure
 </code></pre></div>
 <p>To know more about the vault salt, please read <a href="../security/#use-of-salted-passwords-in-the-mediaease-secure-vault">this documentation</a>.</p>
+<h2 id="skip-metapackage-generation">Skip Metapackage Generation<a class="headerlink" href="#skip-metapackage-generation" title="Permanent link">&para;</a></h2>
+<p>By default, MediaEase generates a Metapackage to lock installed dependencies. This prevents the accidental removal of crucial packages. However, if you're certain of your actions and want to bypass this safeguard, you can use the <code>--no-lock</code> flag.</p>
+<div class="highlight"><pre><span></span><code>./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--no-lock
+</code></pre></div>
+<h2 id="skip-reboot-after-installation">Skip Reboot After Installation<a class="headerlink" href="#skip-reboot-after-installation" title="Permanent link">&para;</a></h2>
+<p>By default, MediaEase will prompt you to reboot at the end of the installation process. If you're sure you don't need a reboot, you can use the <code>--no-reboot</code> flag to skip this step.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>It is highly recommended to reboot after installation to ensure all changes are properly applied.</p>
+</div>
+<div class="highlight"><pre><span></span><code>./setup.sh<span class="w"> </span>-u<span class="w"> </span><span class="nv">$username</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$password</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$email</span><span class="w"> </span>--no-reboot
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If both <code>--no-reboot</code> and <code>--reboot</code> flags are used, MediaEase will still prompt you to reboot.</p>
+</div>
 <p><a href="../raid-setup/">Continue to Raid Setup Array</a></p>
 
 
