@@ -24,7 +24,6 @@ nav:
       - HarmonyUI: mediaease/components/harmonyui/README.md
       - Zen: mediaease/components/zen/README.md
       - Mflibs: mediaease/components/mflibs/README.md
-      - Binaries: mediaease/components/binaries/README.md
   - API Reference: mediaease/components/api/index.html
   - Zen Scripts:
       - Software:
