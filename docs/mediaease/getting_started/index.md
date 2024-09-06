@@ -32,12 +32,11 @@ Follow the detailed instructions to install HarmonyUI, the full MediaEase system
 <div class="grid cards" markdown>
 
 - :material-book-open: __[Prerequisites]__ – Ensure you have all the necessary prerequisites before beginning the installation.
-- :material-frequently-asked-questions: __[FAQ]__ – Step-by-step instructions to install only HarmonyUI.
+- :material-cloud-upload: __[HarmonyUI Standalone Installation]__ – Step-by-step instructions to install only HarmonyUI.
 - :material-cloud-upload: __[MediaEase Full Installation]__ – Comprehensive guide to install the full MediaEase project, including HarmonyUI and scripts.
 </div>
 
 [Prerequisites]: #prerequisites
-[FAQ]: faq.md
 [MediaEase Full Installation]: installation.md
 
 ## Configuration
